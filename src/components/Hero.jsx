@@ -30,8 +30,8 @@ const Hero = () => {
   </div>
 
   {/* Hero Section */}
-  <section className="relative z-10 flex items-center justify-center h-full px-0">
-    <div className="relative text-center md:text-left max-w-4xl xl:right-[9%] pb-[190px]">
+  <section className="relative flex flex-row p-0 mx-0 z-10  items-center justify-center h-full px-0">
+    <div className="relative text-center md:text-left max-w-4xl xl:right-[5%] pb-[190px]">
       <h1 className="text-[25px] sm:text-[30px] xl:text-[70px] font-extrabold">
         Baobab Primary School
       </h1>
@@ -44,6 +44,9 @@ const Hero = () => {
     <div className="relative flex items-center justify-center h-full pb-[90px]">
       <img className="w-[720px]" src="public/images/herostudents.png" alt="herostudents.png" />
     </div>
+  </section>
+  <section className="relative flex items-center justify-center mt-[-140px] z-50 ">
+    <div className="h-[80px] w-[950px] bg-blue-900 rounded-full "></div>
   </section>
 </div>
 
