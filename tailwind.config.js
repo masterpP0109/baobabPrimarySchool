@@ -5,7 +5,21 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+       fontFamily: {
+        aksara: ['"Aksara Bali Galang"', 'sans-serif'],
+        aleta: ['"Aleta"', 'sans-serif'],
+      },
+      letterSpacing: {
+        'wide-20': '0.20rem',
+        'wide-30': '0.30rem',
+        'wide-50': '0.50rem',
+        'wide-70': '0.70rem', // ≈ 15% of font-size
+      },
+    },
   },
   plugins: [],
 }
+
+
+
