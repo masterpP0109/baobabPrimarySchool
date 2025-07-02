@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
+import {motion} from "framer-motion"
 import { MoveRight } from "lucide-react";
+
 
 const ProgressWithIcon = ({ targetProgress, triggerAnimation }) => {
   const [progress, setProgress] = useState(0);
@@ -56,9 +58,13 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <div
+    <motion.div
       className="flex mt-[200px] px-[200px]  justify-around"
       ref={sectionRef}
+      initial={{opacity:0, y:600}}
+      whileInView={{opacity:1, y:0}}
+      transition={{duration:1.8, ease:"easeInOut"}}
+      viewport={{once:true, amount: 0.2}}
     >
       <section className="flex flex-col gap-[3rem]">
         <h1 className="text-[28px] sm:text-[36px] xl:text-[50px] font-[400] leading-none tracking-wide-30">
@@ -91,12 +97,14 @@ const AboutUs = () => {
           </div>
         ))}
 
-        <button
+        <motion.button
+         whileHover={{ scale: 1.1 }} 
+        whileTap={{ scale: 0.9}}
           className="w-[205px] h-[60px] top-9 p-5 flex items-center text-[21px] hover:bg-slate-500
-        rounded-[15px] bg-[#184C77] text-white tracking-wide-20"
-        >
+        rounded-[15px] bg-[#184C77]  transition-all duration-300 tracking-wide-20 text-white">
+      
           Explore More
-        </button>
+        </motion.button>
 
         {/* Animated Progress Bar */}
         <ProgressWithIcon targetProgress={75} triggerAnimation={inView} />
@@ -133,7 +141,7 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-    </div>
+    </motion.div>
   );
 };
 

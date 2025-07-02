@@ -1,16 +1,10 @@
-import React from 'react'
-import Hero from './components/Hero'
-import AboutUs from './components/AboutUs'
-import Academics from './components/Academics'
-import Excelling from  './components/Excelling'
+
+import Home from './Pages/Home'
 
 const App = () => {
   return (
     <div>
-      <Hero/>
-      <AboutUs/>
-      <Academics/>
-      <Excelling/>
+     <Home/>
     </div>
   )
 }
