@@ -4,6 +4,8 @@ import Hero from '../components/Home/Hero'
 import Academics from '../components/Home/Academics'
 import Excelling from '../components/Home/Excelling'
 import Extracaricular from '../components/Home/Extracaricular'
+import Testimonials from '../components/Home/Testimonials'
+
 
 const Home = () => {
   return (
@@ -13,6 +15,8 @@ const Home = () => {
       <Academics/>
       <Excelling/>
       <Extracaricular/>
+      <Testimonials/>
+      
     </div>
   )
 }

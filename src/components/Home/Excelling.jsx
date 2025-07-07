@@ -1,14 +1,13 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
 import { Home, Menu, User } from "lucide-react";
 const Excelling = () => {
   return (
-    <motion.div className="relative mt-[200px] bg-black w-full h-[470px] flex flex-col items-center"
+    <motion.div className="relative mt-[200px] bg-black w-full h-[470px] flex flex-col items-center "
      initial={{opacity:0, y:380}}
       whileInView={{opacity:1, y:0}}
-      transition={{duration:1.1, ease:"easeOut"}}
+      transition={{duration:1.1, ease:"easeInOut"}}
       viewport={{once:true, amount: 0.2}}>
-      <section className=" flex flex-col gap-10 justify-around">
+      <section className=" flex flex-col gap-10 justify-around  ">
         <section className="flex mt-[-100px]  items-center bg-[#184C77] px-[115px] py-[70px] w-[1550px] rounded-[20px] h-[200px] gap-[50px]">
           <div className="flex items-center  w-full  gap-[30px]">
             <div className="flex w-full flex-col gap-1 items-start">
