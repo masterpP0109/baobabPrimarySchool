@@ -13,7 +13,7 @@ const Academics = () => {
       {/* Image Side */}
       <section className="img-section mb-10 lg:mb-0 flex justify-center w-full xl:w-1/2">
         <div
-          className="relative w-full max-w-[900px] h-[400px] sm:h-[500px] md:h-[700px] lg:h-[990px] xl:w-[700px] xl:h-[760px] bg-cover bg-center bg-no-repeat bg-[url('public/images/fullStudentImg.png')] rounded-[30px] mx-auto"
+          className="relative w-full max-w-[900px] h-[400px] sm:h-[500px] md:h-[700px] lg:h-[990px] xl:w-[700px] xl:h-[760px] bg-cover bg-center bg-no-repeat bg-[url('images/fullStudentImg.png')] rounded-[30px] mx-auto"
         >
           {/* Top floating card */}
           <div className="absolute top-[-60px] md:top-[-90px] left-1/2 transform -translate-x-1/2 flex ml-[-80px] sm:ml-[-180px] md:ml-[-260px] flex-col gap-5">
