@@ -18,6 +18,7 @@ export default {
       },
       animation:{
         'spin-slow': 'spin 4s linear infinite',
+        shine: 'shine 2s linear infinite',
       },
       transformOrigin: {
         'bottom-center': '50% 100%',
@@ -29,7 +30,18 @@ export default {
           },
           '100%': {transform: 'rotate(360deg)'},
         },
+        shine: {
+          '0%':{left:'-100%'},
+           '100%':{left:'100%'},
+        }
       },
+    },
+    screens: {
+      xs: "375px", // Custom small
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
     },
   },
   plugins: [],

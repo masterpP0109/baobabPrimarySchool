@@ -4,7 +4,7 @@ import { User } from "lucide-react";
 
 const Extracaricular = () => {
   return (
-    <motion.div className="mt-[200px] ml-[-100px] flex items-center content-center gap-1  justify-evenly"
+    <motion.div className="mt-[200px] ml-[-100px] flex xl:flex-row lg:flex-row sm:flex-col xs: md:flex-col  items-center content-center gap-1  justify-evenly"
      initial={{ opacity: 0, y: 300 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.8, ease: "easeInOut" }}
@@ -15,8 +15,8 @@ const Extracaricular = () => {
       <p className="text-[20px] sm:text-[18px] xl:text-[22px]">Beyond the classroom, we nurture talent, build <br/>
         character, and inspire every child to shine through sports,<br/>
          arts, leadership, and service</p>
-         <div className="flex flex-col justify-around gap-[90px]"> 
-          <div className="flex justify-between">
+         <div className="flex flex-col justify-around gap-[150px]"> 
+          <div className="flex flex-col gap-[65px] md:flex-row items-center justify-between ">
           {[ " Arts and <br/> Creativity",
              "Sports  and Physical <br/> Activities",].map((item) => (
   <div key={item} className="flex items-center gap-[30px]  sm:text-base lg:text-xl xl:text-[20px] ">
@@ -32,7 +32,7 @@ const Extracaricular = () => {
 ))}
              
          </div>
-          <div className="flex flex-col md:flex-row items-center justify-between">
+          <div className="flex flex-col md:flex-row items-center justify-between ">
   {[
     "Debate  Public &<br/> Speaking",
     "Life Skills &<br/> Leadership",
