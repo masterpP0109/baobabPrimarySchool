@@ -4,7 +4,7 @@ import { User } from "lucide-react";
 
 const Extracaricular = () => {
   return (
-    <motion.div className="mt-[200px] ml-[-100px] flex items-center content-center gap-1  justify-evenly"
+    <motion.div className="mt-[200px] ml-[-100px] flex xl:flex-row lg:flex-row sm:flex-col xs: md:flex-col  items-center content-center gap-1  justify-evenly"
      initial={{ opacity: 0, y: 300 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.8, ease: "easeInOut" }}

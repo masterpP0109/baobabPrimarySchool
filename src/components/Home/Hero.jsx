@@ -1,4 +1,4 @@
-import React from "react";
+import {useState, useEffect, useRef} from "react";
 import { motion } from "framer-motion";
 import { Home, Menu, User } from "lucide-react";
 import {
@@ -9,9 +9,14 @@ import {
 
 import Navbar from "./Navbar";
 
-const Hero = () => {
+//Custo Cursor
+
+
+const Hero = (isHovering3D) => {
+    
   return (
     <div className="relative h-[800px]">
+       
       {/* Background Video */}
       <video
         className="absolute inset-0 w-full h-full object-cover z-0"

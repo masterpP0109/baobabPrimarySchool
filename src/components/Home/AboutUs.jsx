@@ -38,31 +38,6 @@ const ProgressWithIcon = ({ targetProgress, triggerAnimation }) => {
   );
 };
 
-function useTypingEffect(text, inView, speed = 40) {
-  const [displayed, setDisplayed] = useState("");
-
-  useEffect(() => {
-    let timeout;
-    if (inView) {
-      setDisplayed("");
-      let i = 0;
-      function type() {
-        setDisplayed(text.slice(0, i));
-        if (i < text.length) {
-          timeout = setTimeout(type, text[i] === "<" ? 0 : speed);
-          i++;
-        }
-      }
-      type();
-    } else {
-      setDisplayed("");
-    }
-    return () => clearTimeout(timeout);
-  }, [text, inView, speed]);
-
-  return displayed;
-}
-
 const AboutUs = () => {
   const sectionRef = useRef(null);
   const [inView, setInView] = useState(false);
@@ -72,7 +47,7 @@ const AboutUs = () => {
   const rightControls = useAnimation();
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 1024px)");
+    const mediaQuery = window.matchMedia("(min-width: 1224px)");
     setIsLargeScreen(mediaQuery.matches);
 
     const handleResize = () => setIsLargeScreen(mediaQuery.matches);
@@ -82,7 +57,7 @@ const AboutUs = () => {
   }, []);
 
   useEffect(() => {
-    if (!isLargeScreen) return;
+    if (typeof window !== "undefined" && window.innerWidth >= 768 && !isLargeScreen) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => setInView(entry.isIntersecting),
@@ -106,21 +81,10 @@ const AboutUs = () => {
     }
   }, [inView, isLargeScreen, leftControls, rightControls]);
 
-  const aboutText = `At Baobab Primary School, we believe every child holds the potential
-to lead, inspire, and uplift their community. Rooted in strong values
-and enriched by our unique location near one of the world’s natural
-wonders, we provide a caring, inclusive, and empowering learning
-environment where young minds are guided to grow in confidence,
-character, and curiosity.`;
-
-  const aboutLines = aboutText.split("\n");
-
-  const allTypedLines = aboutLines.map((line) => useTypingEffect(line, inView, 40));
-  const typedLines = isLargeScreen ? allTypedLines : aboutLines;
-
   return (
     <motion.div
-      className="px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row mt-[200px] md:items-center justify-around gap-[30px] overflow-hidden"
+      className="px-4 sm:px-6 lg:px-5 flex xs:flex-col sm:flex-col flex-col md:flex-col 
+       lg:flex-col xl:flex-row mt-[200px] md:items-center justify-around gap-[30px] overflow-hidden"
       ref={sectionRef}
       initial={{ opacity: 0, y: 300 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -136,7 +100,7 @@ character, and curiosity.`;
           transition={{ type: "spring", stiffness: 80, damping: 20 }}
         >
           <motion.h1
-            className="text-sm sm:text-2xl md:text-3xl lg:text-4xl xl:text-[65px] font-[400] leading-none tracking-wide-30"
+            className="text-sm sm:text-2xl md:text-3xl lg:text-[65px] xl:text-[65px] lg:text-center xl:text-start font-[400] leading-none tracking-wide-30"
             initial={{ opacity: 0, y: 30 }}
             animate={inView && isLargeScreen ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.7 }}
@@ -145,17 +109,17 @@ character, and curiosity.`;
           </motion.h1>
 
           <motion.div
-            className="text-sm sm:text-base md:text-lg lg:text-[25px] font-[400] leading-[28px] sm:leading-[35px] min-h-[210px]"
+            className="text-sm sm:text-base md:text-[10px] lg:text-[22px] xl:text-[25px] font-[400] md:leading-[50px] lg:leading-[28px] sm:leading-[35px] min-h-[210px] text-black"
             initial={{ opacity: 0 }}
             animate={inView && isLargeScreen ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.7 }}
           >
-            {aboutLines.map((_, idx) => (
-              <span key={idx} className="block">
-                {typedLines[idx]}
-                <br />
-              </span>
-            ))}
+            At Baobab Primary School, we believe every child holds the potential<br />
+            to lead, inspire, and uplift their community. Rooted in strong values<br />
+            and enriched by our unique location near one of the world’s natural<br />
+            wonders, we provide a caring, inclusive, and empowering learning<br />
+            environment where young minds are guided to grow in confidence,<br />
+            character, and curiosity.
           </motion.div>
 
           <motion.div
@@ -164,29 +128,38 @@ character, and curiosity.`;
             animate={inView && isLargeScreen ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            {[
-              "Rooted in strong core values",
-              "Balanced academic and creative learning",
-              "Supportive, inclusive school community",
-            ].map((text, index) => (
-              <div
-                key={index}
-                className="flex flex-col sm:flex-row gap-3 md:gap-5 items-center"
-              >
-                <div className="h-6 w-6 md:h-9 md:w-9 bg-transparent border-[3px] md:border-[4px] flex flex-col items-center rounded-full justify-center border-[#184C77]">
-                  <div className="h-3 w-3 md:h-6 md:w-6 bg-[#184C77] rounded-full"></div>
-                </div>
-                <p className="text-sm sm:text-base md:text-lg lg:text-[21px] font-normal leading-none">
-                  {text}
-                </p>
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-5 items-center">
+              <div className="h-6 w-6 md:h-9 md:w-9 bg-transparent border-[3px] md:border-[4px] flex flex-col items-center rounded-full justify-center border-[#184C77]">
+                <div className="h-3 w-3 md:h-6 md:w-6 bg-[#184C77] rounded-full"></div>
               </div>
-            ))}
+              <p className="text-sm sm:text-base md:text-lg lg:text-[21px] font-normal leading-none text-black">
+                Rooted in strong core values
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-5 items-center">
+              <div className="h-6 w-6 md:h-9 md:w-9 bg-transparent border-[3px] md:border-[4px] flex flex-col items-center rounded-full justify-center border-[#184C77]">
+                <div className="h-3 w-3 md:h-6 md:w-6 bg-[#184C77] rounded-full"></div>
+              </div>
+              <p className="text-sm sm:text-base md:text-lg lg:text-[21px] font-normal leading-none text-black">
+                Balanced academic and creative learning
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-5 items-center">
+              <div className="h-6 w-6 md:h-9 md:w-9 bg-transparent border-[3px] md:border-[4px] flex flex-col items-center rounded-full justify-center border-[#184C77]">
+                <div className="h-3 w-3 md:h-6 md:w-6 bg-[#184C77] rounded-full"></div>
+              </div>
+              <p className="text-sm sm:text-base md:text-lg lg:text-[21px] font-normal leading-none text-black">
+                Supportive, inclusive school community
+              </p>
+            </div>
           </motion.div>
 
           <motion.button
             whileHover={isLargeScreen ? { scale: 1.1 } : {}}
             whileTap={isLargeScreen ? { scale: 0.9 } : {}}
-            className="w-full max-w-[205px] h-[50px] md:h-[60px] mt-4 p-3 md:p-5 flex items-center text-sm sm:text-base md:text-lg lg:text-xl hover:bg-slate-500 rounded-[15px] bg-[#184C77] transition-all duration-300 tracking-wide-20 text-white"
+            className="w-full max-w-[205px] h-[50px] md:h-[60px] mt-4 p-3 md:p-5 flex lg:justify-center xl:align-start lg:items-center text-sm sm:text-base md:text-lg lg:text-xl hover:bg-slate-500 rounded-[15px] bg-[#184C77] transition-all duration-300 tracking-wide-20 text-white"
             initial={{ opacity: 0, y: 30 }}
             animate={inView && isLargeScreen ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.7, delay: 0.3 }}
@@ -200,9 +173,10 @@ character, and curiosity.`;
         </motion.section>
       </AnimatePresence>
 
+      {/* Right Section with Cards */}
       <AnimatePresence>
         <motion.section
-          className="w-1/2 flex justify-center"
+          className="w-1/2 flex justify-center lg:mr-[-100px] xl:mr-[-120px]"
           initial={{ x: 100, opacity: 0 }}
           animate={rightControls}
           exit={{ x: 100, opacity: 0 }}
@@ -213,13 +187,10 @@ character, and curiosity.`;
             style={{ backgroundImage: "url('/images/heroimage.webp')" }}
           >
             <div className="absolute top-[30px] sm:top-[60px] md:top-[105px] left-1/2 transform -translate-x-1/2 flex ml-[-80px] sm:ml-[-180px] md:ml-[-280px] flex-col gap-3 sm:gap-5">
-              {/* Card 1 */}
+              
               <motion.div
+                whileHover={{ scale: 1.05, y: -5 }}
                 className="w-[210px] sm:w-[220px] md:w-[308px] h-[90px] sm:h-[120px] md:h-[221px] rounded-[20px] border-[4px] md:border-[6px] border-white bg-black text-white flex items-center"
-                initial={{ x: 100, opacity: 0 }}
-                animate={rightControls}
-                exit={{ x: 100, opacity: 0 }}
-                transition={{ delay: 0.2, duration: 0.8 }}
               >
                 <p className="px-3 sm:px-5 text-sm sm:text-base md:text-lg lg:text-[25px] leading-6 sm:leading-9">
                   At Baobab Primary School, we empower young minds to grow with
@@ -227,33 +198,26 @@ character, and curiosity.`;
                 </p>
               </motion.div>
 
-              {/* Card 2 */}
               <motion.div
-                className="w-[250px] sm:w-[250px] md:w-[345px] h-[90px] sm:h-[120px] md:h-[241px] flex items-center mt-[-20px] sm:mt-[-30px] md:mt-[-40px] ml-[-8px] sm:ml-[-12px] md:ml-[-18px] bg-[#184C77] border-[3px] md:border-[5px] rounded-[20px]"
-                initial={{ x: 100, opacity: 0 }}
-                animate={rightControls}
-                exit={{ x: 100, opacity: 0 }}
-                transition={{ delay: 0.3, duration: 0.8 }}
+                whileHover={{ scale: 1.05, y: -5 }}
+                className="w-[250px] sm:w-[250px] md:w-[345px] h-[90px] sm:h-[120px] md:h-[241px] flex items-center mt-[-20px] sm:mt-[-30px] md:mt-[-40px] ml-[-8px] sm:ml-[-12px] md:ml-[-18px] bg-[#184C77] border-[3px] md:border-[5px] rounded-[20px] text-white"
               >
-                <p className="text-white px-3 sm:px-5 text-sm sm:text-base md:text-lg lg:text-[25px] leading-6 sm:leading-9">
+                <p className="px-3 sm:px-5 text-sm sm:text-base md:text-lg lg:text-[25px] leading-6 sm:leading-9">
                   We Baobab, we inspire lifelong learners grounded in empathy,
                   curiosity, and resilience.
                 </p>
               </motion.div>
 
-              {/* Card 3 */}
               <motion.div
+                whileHover={{ scale: 1.05, y: -5 }}
                 className="w-[180px] sm:w-[220px] md:w-[308px] h-[90px] sm:h-[120px] md:h-[221px] rounded-[20px] border-[4px] md:border-[6px] mt-[-15px] sm:mt-[-20px] md:mt-[-30px] border-white bg-black text-white flex items-center"
-                initial={{ x: 100, opacity: 0 }}
-                animate={rightControls}
-                exit={{ x: 100, opacity: 0 }}
-                transition={{ delay: 0.4, duration: 0.8 }}
               >
-                <p className="px-3 sm:px-5 text-sm sm:text-base md:text-lg lg:text-[25px] font-normal leading-6 sm:leading-9">
+                <p className="px-3 sm:px-5 text-sm sm:text-base md:text-lg lg:text-[25px] leading-6 sm:leading-9">
                   Baobab Primary School builds strong foundations for bright,
                   confident futures.
                 </p>
               </motion.div>
+
             </div>
           </div>
         </motion.section>

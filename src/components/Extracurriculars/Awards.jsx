@@ -41,7 +41,7 @@ const Awards = () => {
         <section className="w-full flex justify-center my-8">
   <div className="relative w-full max-w-4xl flex items-center">
     {/* The line */}
-    <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-[3px] bg-gray-600 z-0" />
+    <div className="absolute left-0 right-0 top-1/2  -translate-y-1/2 h-[3px] bg-gray-600 z-0" />
     {/* The circles */}
     <div className="w-full flex justify-between relative z-10">
       <div className="w-[25px] h-[35px] rounded-full border-[2px] border-[#184c77e9] bg-white"></div>
