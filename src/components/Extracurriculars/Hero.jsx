@@ -1,20 +1,21 @@
-import React from 'react'
+
+import Navbar from '../Home/Navbar';
+import { motion } from "framer-motion";
+import { Home, Menu, User } from "lucide-react";
+import {
+  AcademicCapIcon,
+  CreditCardIcon,
+  PhoneIcon,
+} from "@heroicons/react/24/outline";
 
 const Hero = () => {
   return (
-     <div className="relative h-[800px] ">
-          {/* Background Video */}
-          <video
-            className="absolute inset-0 w-full h-full object-cover z-0"
-            src="/videos/hero.webm"
-            autoPlay
-            muted
-            loop
-            playsInline
-          />
+     <div className="relative w-full h-[970px] "  style={{ backgroundImage: "url('images/excurrbg.png')" }}>
+        
+        
     
           {/* Dark Overlay */}
-          <div className="absolute inset-0 bg-black opacity-70 z-10 text-gray-300 "></div>
+         {/** */} <div className="absolute inset-0 bg-[#184C77] opacity-60 z-10 text-gray-300 "></div>
     
           {/* Header + Hero Content */}
           <div className="relative z-20 flex flex-col h-full justify-between">
@@ -22,6 +23,7 @@ const Hero = () => {
            <Navbar/>
     
             {/* Hero Content Section */}
+
             <section className="flex flex-col lg:flex-row items-center justify-center px-4 sm:px-8 xl:px-[180px] gap-20 flex-grow pb-10">
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
@@ -36,54 +38,43 @@ const Hero = () => {
                   Nurturing the development of the child ,enabling <br />
                   pupils to develop their talents in academics , <br />
                   sports ,and arts.
-                </p>
-    
-                <motion.button 
-                 whileHover={{ scale: 1.1 }} 
-                 whileTap={{ scale: 0.9}}
-                className="w-[245px] h-[75px] top-9 p-5 mt-4 text-[25px] rounded-[60px] bg-[#184C77;] hover:bg-slate-500
-                transition-all duration-300 tracking-wide-30">
-                  Apply Now
-                </motion.button>
-              </motion.div>
-            </section>
-    
-            {/* Blue Rounded Bottom */}
-            <section className="flex justify-center mb-[-2%] z-30">
-              <div className="h-[120px] flex items-center px-10 w-[99%] max-w-[1550px] bg-[#184C77] rounded-full">
-                <div className="flex items-center  w-[100%] justify-between px-20">
-                  <div className="flex items-center animate-bounce cursor-pointer gap-4">
-                    <div className="w-[70px] h-[70px] rounded-full border border-white flex items-center justify-center ">
-                      <AcademicCapIcon className="w-9 h-9 text-white border-black rounded-full  " /> 
-                    </div>
-                    <div>
-                      
-                      <p className="text-white text-[18px]">Enroll With Us</p>
-                    </div>
-                  </div>
-    
-                  <div className="flex items-center animate-bounce cursor-pointer gap-4">
-                    <div className="w-[70px] h-[70px] rounded-full border border-white flex items-center justify-center ">
-                      <CreditCardIcon className="w-9 h-9 text-white border-black rounded-full  " />
-                    </div>
-                    <div>
-                      {" "}
-                      <p className="text-white text-[18px]">Pay Online</p>
-                    </div>
-                  </div>
-    
-                  <div className="flex items-center animate-bounce cursor-pointer   gap-4">
-                    <div className="w-[70px] h-[70px] rounded-full border border-white flex items-center justify-center hover:shadow-[50] ">
-                      <PhoneIcon className="w-9 h-9 text-white border-black  rounded-full   " />
-                    </div>
-                    <div>
-                      {" "}
-                      <p className="text-white text-[18px]">Contact Us</p>
-                    </div>
-                  </div>
-                </div>
+
+            <section className="flex flex-col lg:flex-col items-center mt-[50px]  flex-grow">
+             <div className="h-[780px]  w-[820px] bg-center bg-cover bg-no-repeat bg-[url('images/curricularsBg.png')]">
+
+             </div>
+             <div className="w-[1290px] h-[200px] flex items-center px-[100px] py-[3px] justify-between mt-[-200px] bg-white rounded-[30px] ">
+              <div className="flex flex-col gap-[2px] ">
+                <h5 className="text-[25px] ">Extracurricullars</h5>
+                 <h1 className="text-[45px] text-[#184C77] leading-tight ">Explore Our<br/>
+                                     Extracurricular</h1>
               </div>
+
+              <div className="flex flex-col gap-[10px] ">
+                <p className="text-[18px]  ">
+                  Visit our classrooms, library, playground, and activity <br/>
+                  rooms to see where learning and fun happen every <br/>
+                  day
+
+
+                </p>
+                
+                <motion.button 
+                             whileHover={{ scale: 1.1 }} 
+                             whileTap={{ scale: 0.9}}
+                            className="w-[180px] h-[50px] top-[3px] p-5 pb-[40px] text-[18px] text-white rounded-[20px]
+                             bg-[#184C77] hover:bg-white hover:text-[#184C77]
+                            transition-all duration-300 tracking-wide-30">
+                              Apply Now
+              </motion.button>
+
+              </div>
+               
+             </div>
             </section>
+    
+           
+         
           </div>
         </div>
       );
