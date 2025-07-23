@@ -3,11 +3,16 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Aksara Bali Galang';
+  font-family: 'Galang';
+    font-family: 'Aleta';
+
   src: local('Aksara Bali Galang'), url('../assets/fonts/AksaraBaliGalang.ttf') format('truetype');
+    src: local('Aleta'), url('../assets/fonts/Aleta-Regular.ttf') format('truetype');
 }
 
-@font-face {
-  font-family: 'Aleta';
-  src: local('Aleta'), url('../assets/fonts/Aleta-Regular.ttf') format('truetype');
+
+@theme{
+  --font-Galang: 'Galang',serif;
+  
 }
+

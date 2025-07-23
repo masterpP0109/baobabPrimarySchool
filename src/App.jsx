@@ -4,6 +4,7 @@ import AboutUs from './Pages/AboutUs'
 import Academics from './Pages/Academics'
 import Navbar from './components/Home/Navbar'
 import Footer from './components/Home/Footer'
+import './App.css'
 
 
 const App = () => {

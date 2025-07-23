@@ -29,7 +29,7 @@ const Hero = () => {
                 transition={{ delay: 0.4, duration: 1.8 }}
                 className="text-white text-center md:text-left max-w-4xl gap-20 mb-36 lg:mb-0 xl:ml-[-620px] w-[100%]"
               >
-                <h1 className="text-[28px] sm:text-[36px] xl:text-[64px] font-normal leading-none tracking-wide-50 ">
+                <h1 className="text-[28px] sm:text-[36px] xl:text-[64px] font-normal leading-none tracking-wide-50 font-Galang">
                   Baobab Primary School
                 </h1>
                 <p className="mt-4 text-sm sm:text-lg max-w-[600px] xl:text-[20px]  font-normal leading-none tracking-wide-20 w-[100%]">
