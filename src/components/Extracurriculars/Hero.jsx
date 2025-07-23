@@ -23,6 +23,22 @@ const Hero = () => {
            <Navbar/>
     
             {/* Hero Content Section */}
+
+            <section className="flex flex-col lg:flex-row items-center justify-center px-4 sm:px-8 xl:px-[180px] gap-20 flex-grow pb-10">
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 3, y: 0 }}
+                transition={{ delay: 0.4, duration: 1.8 }}
+                className="text-white text-center md:text-left max-w-4xl gap-20 mb-36 lg:mb-0 xl:ml-[-620px] w-[100%]"
+              >
+                <h1 className="text-[28px] sm:text-[36px] xl:text-[64px] font-normal leading-none tracking-wide-50 font-Galang">
+                  Baobab Primary School
+                </h1>
+                <p className="mt-4 text-sm sm:text-lg max-w-[600px] xl:text-[20px]  font-normal leading-none tracking-wide-20 w-[100%]">
+                  Nurturing the development of the child ,enabling <br />
+                  pupils to develop their talents in academics , <br />
+                  sports ,and arts.
+
             <section className="flex flex-col lg:flex-col items-center mt-[50px]  flex-grow">
              <div className="h-[780px]  w-[820px] bg-center bg-cover bg-no-repeat bg-[url('images/curricularsBg.png')]">
 
@@ -39,6 +55,7 @@ const Hero = () => {
                   Visit our classrooms, library, playground, and activity <br/>
                   rooms to see where learning and fun happen every <br/>
                   day
+
 
                 </p>
                 
