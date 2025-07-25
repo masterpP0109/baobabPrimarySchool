@@ -23,10 +23,12 @@ const AcdemicExcellence = () => {
     whileInView={{opacity:1, scale: 1}}
     transition={{duration: 2}}>
       <div className="relative flex flex-col gap-[15px] ">
-        <div className="relative h-[370px] align-center justify-center w-[620px] bg-center bg-cover bg-no-repeat bg-[url('public/images/childOnBoard.png')] ">
+        <div className="relative h-[370px] align-center justify-center w-[620px] bg-center bg-cover bg-no-repeat  " 
+        style={{ backgroundImage: "url('images/childOnBoard.png')"}}>
         <div className="absolute h-[300px] w-[390px] rounded-[20px] border-b-0 border-[7px] ml-[110px] top-[100px] bg-transparent"></div>
         </div>
-         <div className="relative h-[370px] align-center justify-center w-[620px] bg-center bg-cover bg-no-repeat bg-[url('public/images/StudentsWalking.png')] ">
+         <div className="relative h-[370px] align-center justify-center w-[620px] bg-center bg-cover bg-no-repeat  "
+         style={{ backgroundImage: "url('images/StudentsWalking.png')"}}>
         <div className="absolute h-[280px] w-[390px] rounded-[20px] border-t-0 border-[7px] ml-[110px] top-[-15px] bg-transparent"></div>
         </div>
         <div className="absolute flex flex-col bg-[#184C77] border-[10px] top-[255px] ml-[380px] items-center 

@@ -9,7 +9,9 @@ const ExploreExtra = () => {
     transition={{duration: 2}}>
         <div className="flex flex-col h-[600px]">
             <section className="flex w-[850px] rounded-[15px] items-center bg-[#184C77] py-[20px] px-[20px] gap-[35px] ">
-                <div className="w-[380px] h-[420px] rounded-[15px] bg-center bg-cover bg-no-repeat  bg-[url('public/images/boyOnLapT.png')]"></div>
+                <div className="w-[380px] h-[420px] rounded-[15px] bg-center bg-cover bg-no-repeat
+                  "
+                  style={{ backgroundImage: "url('images/boyOnLapT.png')" }}></div>
                 <div className="flex flex-col ">
                     <h1 className="text-white text-[55px]">Baobab Primary</h1>
                     <p className="text-white text-[21px] w-full ">Visit our classrooms, library, <br/>
@@ -68,7 +70,7 @@ const ExploreExtra = () => {
           <div className="flex w-[550px] justify-center gap-[160px] px-[50px] items-center  rounded-[15px]
           relative shadow-[0_6px_4px_rgba(0,0,0,0.3)] ">
             <div className="w-[110px] h-[80px] bg-center bg-cover bg-no-repeat flex items-center justify-center  ">
-              <img src="public/images/blackOpenB.png" className="w-[60px] h-[60px]" alt="" />
+              <img src="images/blackOpenB.png" className="w-[60px] h-[60px]" alt="" />
             </div>
           <div className="w-full max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-xl mt-8 h-[50px] sm:h-[60px] md:h-[65px]  bg-white flex flex-col items-start justify-around">
           <h1 className="text-base sm:text-lg md:text-xl lg:text-[25px] tracking-wide-20 font-bold text-black">
