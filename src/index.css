@@ -12,4 +12,9 @@
   src: local('Aleta'), url('../assets/fonts/Aleta-Regular.ttf') format('truetype');
 }
 
+body{
+  overflow-x: hidden;
+
+}
+
 

@@ -3,7 +3,10 @@ import { Home, Menu, User } from "lucide-react";
 
 const ExploreExtra = () => {
   return (
-    <div className="flex justify-evenly h-[850px] w-full items-center">
+    <motion.div className="flex justify-evenly h-[850px] w-full items-center"
+     initial={{opacity: 0, translateX: "100%"}}
+    whileInView={{opacity:1, translateX: 0}}
+    transition={{duration: 2}}>
         <div className="flex flex-col h-[600px]">
             <section className="flex w-[850px] rounded-[15px] items-center bg-[#184C77] py-[20px] px-[20px] gap-[35px] ">
                 <div className="w-[380px] h-[420px] rounded-[15px] bg-center bg-cover bg-no-repeat  bg-[url('public/images/boyOnLapT.png')]"></div>
@@ -88,7 +91,7 @@ const ExploreExtra = () => {
                     Apply Now
                   </motion.button>
         </div>
-    </div>
+    </motion.div>
   )
 }
 

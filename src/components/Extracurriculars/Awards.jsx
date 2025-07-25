@@ -27,7 +27,10 @@ const Awards = () => {
      
         ]
   return (
-    <div className="flex flex-col h-[670px] w-full items-center bg-black mt-[185px] justify-around py-[35px]">
+    <motion.div className="flex flex-col h-[670px] w-full items-center bg-black mt-[185px] justify-around py-[35px]"
+    initial={{opacity:0, scale:0}}
+    whileInView={{opacity:1, scale: 1}}
+    transition={{duration: 2}}>
         <div className="flex w-full items-center justify-around">
             <section className="flex flex-col items-center">
                 <h1 className="text-white text-[55px] mt-[40px] tracking-wide-30">Our Awards</h1>
@@ -63,7 +66,7 @@ const Awards = () => {
             ))}
             </section>
         </div>
-    </div>
+    </motion.div>
   )
 }
 
