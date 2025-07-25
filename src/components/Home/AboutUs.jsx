@@ -73,9 +73,9 @@ const AboutUs = () => {
       className="px-4 sm:px-6 lg:px-5 flex xs:flex-col sm:flex-col flex-col md:flex-col 
        lg:flex-col xl:flex-row mt-[100px] xl:mt-[200px] md:items-center justify-around gap-[30px] overflow-hidden"
       ref={sectionRef}
-    initial={{opacity:0, scale: 0}}
-    whileInView={{opacity:1, scale: 1}}
-    transition={{duration: 2}} >
+    initial={{opacity:0, rotateY: "90deg"}}
+    whileInView={{opacity:1, rotateY: 0}}
+    transition={{duration: 3}} >
       <section className="flex flex-col gap-8 md:gap-[3rem] overflow-hidden">
         <h1
           className="text-sm sm:text-3xl text-center lg:text-start md:text-6xl lg:text-[65px] xl:text-[65px]  xl:text-start font-[400] leading-none tracking-wide-30"
