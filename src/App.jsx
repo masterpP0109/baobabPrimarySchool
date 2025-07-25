@@ -4,9 +4,14 @@ import AboutUs from './Pages/AboutUs'
 import Academics from './Pages/Academics'
 import Navbar from './components/Home/Navbar'
 import Footer from './components/Home/Footer'
+
+import './App.css'
+
+
 import Extracurriculars from './Pages/Extracurriculars'
 import CustomCursor from './components/CustomCursor'
 import {useState} from 'react'
+
 
 const App = () => {
    const [isHovering3D, setIsHovering3D] = useState(false);

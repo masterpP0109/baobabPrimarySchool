@@ -3,13 +3,11 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Aksara Bali Galang';
-  src: local('Aksara Bali Galang'), url('../assets/fonts/AksaraBaliGalang.ttf') format('truetype');
-}
+  font-family: 'Galang';
+    font-family: 'Aleta';
 
-@font-face {
-  font-family: 'Aleta';
-  src: local('Aleta'), url('../assets/fonts/Aleta-Regular.ttf') format('truetype');
+  src: local('Aksara Bali Galang'), url('../assets/fonts/AksaraBaliGalang.ttf') format('truetype');
+    src: local('Aleta'), url('../assets/fonts/Aleta-Regular.ttf') format('truetype');
 }
 
 body{
@@ -17,4 +15,9 @@ body{
 
 }
 
+
+@theme{
+  --font-Galang: 'Galang',serif;
+  
+}
 

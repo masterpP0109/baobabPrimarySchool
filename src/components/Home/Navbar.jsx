@@ -3,7 +3,11 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <div className="mt-[40px]">
+
       <header className="flex flex-wrap xl:gap-[40px] bg-transparent justify-between items-center px-2 sm:px-6 xl:px-[140px] py-4">
+
+
+
         <img
           src="/images/logo.png"
           alt="LOGO"
@@ -37,6 +41,7 @@ const Navbar = () => {
           className="hidden md:block px-3 py-1.5 text-sm xl:w-[100px] text-black placeholder:text-white rounded-full border border-none bg-gray-200 bg-opacity-20 focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </header>
+
     </div>
   );
 };
