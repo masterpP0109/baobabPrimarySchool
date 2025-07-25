@@ -10,7 +10,8 @@ import Navbar from "../Home/Navbar";
 
 const Hero = () => {
   return (
-    <div className="relative h-[800px] bg-center bg-cover bg-no-repeat bg-[url('public/images/academicsbgimg.png')]">
+    <div className="relative h-[800px] bg-center bg-cover bg-no-repeat "
+      style={{ backgroundImage: "url('images/academicsbgimg.png')" }}>
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-slate-800 opacity-80 z-10 text-gray-300"></div>
 

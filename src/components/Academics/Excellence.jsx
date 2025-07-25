@@ -27,7 +27,8 @@ const Excellence = () => {
         </motion.button>
       </div>
       <div className="z-50 h-[790px] align-center justify-center mb-[-10px] w-[690px] rounded-[30px] border-[10px]
-       bg-center bg-cover bg-no-repeat bg-[url('public/images/childOnBoard.png')]">
+       bg-center bg-cover bg-no-repeat "
+       style={{ backgroundImage: "url('images/childOnBoard.png')"}}>
 
       </div>
     </motion.div>

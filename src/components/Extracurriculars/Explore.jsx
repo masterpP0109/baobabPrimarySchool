@@ -23,7 +23,8 @@ const Explore = () => {
             </motion.button>
           </div>
           <div className="z-50 h-[820px] align-center justify-center mb-[-10px] w-[710px] rounded-[30px] 
-           bg-center bg-cover bg-no-repeat bg-[url('public/images/replacew.webp')]">
+           bg-center bg-cover bg-no-repeat "
+           style={{ backgroundImage: "url('images/replacew.webp')" }}>
     
           </div>
         </div>
