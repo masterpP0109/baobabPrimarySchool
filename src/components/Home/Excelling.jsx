@@ -38,7 +38,7 @@ const Excelling = () => {
 
   return (
     <motion.div
-      className="mx-auto px-4 sm:px-6 lg:px-8 relative mt-[200px] bg-black w-full flex flex-col items-center xl:h-[610px]"
+      className="mx-auto px-4 sm:px-6 lg:px-8 relative mt-[200px] bg-black w-full flex flex-col items-center xl:h-[520px]"
       initial={{ opacity: 0, y: 380 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.1, ease: "easeInOut" }}
@@ -48,11 +48,13 @@ const Excelling = () => {
         {/* Stats Bar */}
         <section
           ref={statsRef}
-          className="flex flex-col md:flex-row mt-[-60px] md:mt-[-100px] items-center bg-[#184C77] px-4 sm:px-6 lg:px-8 w-full md:max-w-[1650px] rounded-[20px] h-auto md:h-[200px] xl:h-[270px] gap-6 md:gap-[50px] mx-auto"
+          className="flex flex-col md:flex-row mt-[-60px] md:mt-[-100px] items-center
+           bg-[#184C77] px-4 sm:px-6 lg:px-8 w-full md:max-w-[1650px] rounded-[20px] 
+           h-auto md:h-[200px] xl:h-[230px] gap-6 md:gap-[50px] mx-auto   "
         >
           {/* Stat 1 */}
-          <div className="flex items-center w-full gap-4 md:gap-[30px]">
-            <div className="flex w-full flex-col gap-1 items-start">
+          <div className="flex items-center w-full gap-4 md:gap-[30px]  ">
+            <div className="flex w-full flex-col gap-1 items-center">
               <Smile className="w-7 h-7 bg-white text-[#184C77] border-black rounded-[5px]" />
               <div className="flex flex-col items-center">
               <Counter to={50} suffix="K+" isVisible={isInView} delay={0.2} />
@@ -64,7 +66,7 @@ const Excelling = () => {
 
           {/* Stat 2 */}
           <div className="flex items-center w-full justify-between gap-4 md:gap-[50px]">
-            <div className="flex flex-col gap-1 items-start">
+            <div className="flex flex-col gap-1 items-center">
               <User className="w-7 h-7 bg-white text-[#184C77] border-black rounded-[5px]" />
               <div className="flex flex-col items-center">
               <Counter to={5} suffix="K+" isVisible={isInView} delay={0.4} />
@@ -76,7 +78,7 @@ const Excelling = () => {
 
           {/* Stat 3 */}
           <div className="flex items-center w-full justify-around gap-4 md:gap-[50px]">
-            <div className="flex flex-col gap-1 items-start">
+            <div className="flex flex-col gap-1 items-center">
               <School className="w-7 h-7 bg-white text-[#184C77] border-black rounded-[5px]" />
               <div className="flex flex-col items-center">
               <Counter to={3} suffix="K+" isVisible={isInView} delay={0.6} />
@@ -87,7 +89,7 @@ const Excelling = () => {
           </div>
 
           {/* Stat 4 */}
-          <div className="flex flex-col gap-[30px] w-full items-start">
+          <div className="flex flex-col gap-[5px] w-full items-center">
             <GraduationCap className="w-7 h-7 bg-white text-[#184C77] border-black rounded-[5px]" />
             <div className="flex flex-col items-center">
             <Counter to={85} suffix="K+" isVisible={isInView} delay={0.8} />
@@ -96,8 +98,8 @@ const Excelling = () => {
           </div>
         </section>
 
-        {/* Heading and Button */}
-        <section className="flex flex-col sm:flex-row justify-around items-center mt-6 gap-[35px]">
+        {/* Heading and button */}
+        <section className="flex flex-col sm:flex-row justify-around items-center  mt-6 gap-[35px]">
           <div className="flex flex-col">
             <p className="text-base sm:text-lg md:text-[18px] text-white">Decades of Dedication</p>
             <h1 className="text-2xl sm:text-4xl md:text-[55px] text-white tracking-wide-30">
@@ -115,40 +117,62 @@ const Excelling = () => {
         </section>
 
         {/* Journey Cards */}
-        <section className="flex justify-around gap-4 mt-6">
-          {[
-            {
-              title: "Our Journey Forward",
-              desc: "Together we grow, learn, and build bright futures.",
-            },
-            {
-              title: "Empowering Generations",
-              desc: "Each learner shapes tomorrow’s world with confidence.",
-            },
-            {
-              title: "Vision Into Reality",
-              desc: "From classrooms to communities, we drive success.",
-            },
-          ].map((card, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 * idx }}
-              viewport={{ once: true }}
-              className="flex gap-4 items-center"
-            >
-              <div className="relative h-[80px] sm:h-[100px] w-[80px] sm:w-[100px] rounded-full border-4 border-[#184C77] bg-transparent">
-                <div className="absolute h-[40px] sm:h-[50px] w-[81px] sm:w-[101px] -left-[4px] -top-[2px] inset-0
-                  border-t-full border-b-0 rounded-t-full border-[7px] border-[#000000] bg-transparent animate-spin-slow origin-bottom-center">
-                </div>
-              </div>
-              <div>
-                <h1 className="text-lg sm:text-xl md:text-[25px] text-white">{card.title}</h1>
-                <p className="text-sm sm:text-base md:text-[18px] text-white">{card.desc}</p>
-              </div>
-            </motion.div>
-          ))}
+              <section className="flex justify-between gap-[30px] w-full">
+        <div className="flex gap-[20px] text-center items-center">
+          <div
+            className="relative h-[100px] w-[100px] rounded-full border-4 border-[#184C77] 
+        bg-transparent"
+          >
+            <div className="absolute h-[50px] w-[101px] -left-[4px] -top-[2px] inset-0
+            border-t-full border-b-0 rounded-t-full border-[7px]  border-[#00000] 
+        bg-transparent animate-spin-slow origin-bottom-center "
+            ></div>
+          <h1 className="text-white text-[30px]  text-center" >100%</h1>
+          </div>
+           <div>
+              <h1 className="text-[25px] text-white">Our Journey Forward</h1>
+              <p className="text-[18px] text-white">Together we grow, learn, and build <br/>
+                bright futures.</p>
+            </div>
+        </div>
+
+        <div className="flex gap-[20px] text-center ">
+          <div
+            className="relative h-[100px] w-[100px] rounded-full border-4 border-[#184C77] 
+        bg-transparent"
+          >
+            <div className="absolute h-[50px] w-[101px] -left-[4px] -top-[2px] inset-0
+            border-t-full border-b-0 rounded-t-full border-[7px]  border-[#00000] 
+        bg-transparent animate-spin-slow origin-bottom-center delay-[1.6s]"
+            ></div>
+            <h1 className="text-white text-[30px] text-center " >75%</h1>
+           
+          </div>
+           <div>
+              <h1 className="text-[25px] text-white"> Nurturing Potential</h1>
+              <p className="text-[18px] text-white">Encouraging every child to grow, <br/>
+              learn, and succeed. </p>
+            </div>
+        </div>
+
+        <div className="flex gap-[20px] text-center">
+          <div
+            className="relative h-[100px] w-[100px] rounded-full border-4 border-[#184C77] 
+        bg-transparent"
+          >
+            <div className="absolute h-[50px] w-[101px] -left-[4px] -top-[2px] inset-0
+            border-t-full border-b-0 rounded-t-full border-[7px]  border-[#00000] 
+        bg-transparent animate-spin-slow origin-bottom-center "
+            ></div>
+           <h1 className="text-white text-[30px] " >50%</h1>
+          </div>
+           <div>
+              <h1 className="text-[25px] text-white">Graduation</h1>
+              <p className="text-[18px] text-white">Proudly Sending Tomorrow’s <br/>
+                    Leaders into the World, One <br/>
+                Graduate at a Time.</p>
+            </div>
+        </div>
         </section>
       </section>
     </motion.div>

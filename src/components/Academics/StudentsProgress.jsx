@@ -29,7 +29,10 @@ const StudentsProgress = () => {
     ]
   return (
    
-    <div className="mt-[210px] mb-[210px] ">
+    <motion.div className="mt-[210px] mb-[210px] "
+    initial={{opacity: 0, rotateX: "90deg"}}
+    whileInView={{opacity:1, rotateX: 0}}
+    transition={{duration: 2}}>
       <div className="relative flex justify-around px-[100px]">
         <div className="bg-black w-[730px] h-[680px]">
             <div className="h-[220px] w-[320px] bg-[#1e4aaa] "></div>
@@ -56,7 +59,7 @@ const StudentsProgress = () => {
           </motion.button>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
