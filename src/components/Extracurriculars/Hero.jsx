@@ -24,7 +24,8 @@ const Hero = () => {
     
             {/* Hero Content Section */}
             <section className="flex flex-col lg:flex-col items-center mt-[50px]  flex-grow">
-             <div className="h-[730px]  w-[790px] bg-center bg-cover bg-no-repeat bg-[url('images/curricularsBg.png')]">
+             <div className="h-[730px]  w-[790px] bg-center bg-cover bg-no-repeat "
+             style={{ backgroundImage: "url('images/curricularsBg.png')" }}>
 
              </div>
              <div className="w-[1250px] h-[210px] flex items-center px-[100px] py-[5px] justify-between mt-[-200px] bg-white rounded-[30px] ">
