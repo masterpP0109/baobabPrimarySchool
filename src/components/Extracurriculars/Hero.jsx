@@ -38,7 +38,7 @@ const Hero = () => {
                   Nurturing the development of the child ,enabling <br />
                   pupils to develop their talents in academics , <br />
                   sports ,and arts.
-
+               </p>
             <section className="flex flex-col lg:flex-col items-center mt-[50px]  flex-grow">
              <div className="h-[780px]  w-[820px] bg-center bg-cover bg-no-repeat bg-[url('images/curricularsBg.png')]">
 
@@ -75,7 +75,7 @@ const Hero = () => {
     
            
          
-          </div>
+          </motion.div>
         </div>
       );
     };
