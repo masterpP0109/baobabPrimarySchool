@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { User } from "lucide-react";
+import { Link } from "react-router-dom";
 
 
 const Extracaricular = () => {
@@ -8,7 +9,7 @@ const Extracaricular = () => {
      initial={{ opacity: 0, y: 300 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.8, ease: "easeInOut" }}
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true }}
 >
        <section className="flex flex-col justify-around gap-[50px]">
       <h1 className="text-[45px] sm:text-[36px] xl:text-[50px] font-[400] tracking-wide">Extracaricular</h1>
@@ -32,28 +33,25 @@ const Extracaricular = () => {
 ))}
              
          </div>
-          <div className="flex flex-col md:flex-row items-center justify-between ">
-  {[
-    "Debate  Public &<br/> Speaking",
-    "Life Skills &<br/> Leadership",
-  ].map((item) => (
-    <div
-      key={item}
-      className="flex items-center gap-[30px] sm:text-base lg:text-xl xl:text-[20px]"
-    >
-      <div className="bg-[#184C77] h-[80px] w-[80px] inset-0 flex rounded-full items-center px-7">
-        <User className="w-7 h-7 bg-white text-[#184C77] flex align-center rounded-[5px]" />
-      </div>
-      {item.includes("<br/>") ? (
-        <span dangerouslySetInnerHTML={{ __html: item }} />
-      ) : (
-        item
-      )}
+          <div className="flex flex-col gap-[65px] md:flex-row items-center justify-between ">
+          {[ " Arts and <br/> Creativity",
+             "Sports  and Physical <br/> Activities",].map((item) => (
+  <div key={item} className="flex items-center gap-[30px]  sm:text-base lg:text-xl xl:text-[20px] ">
+    <div className="bg-[#184C77] h-[80px] w-[80px] inset-0 flex rounded-full items-center px-7">
+      <User className="w-7 h-7 bg-white text-[#184C77] flex align-center rounded-[5px]" />
     </div>
-  ))}
-</div>
+    {item.includes("<br/>") ? (
+      <span dangerouslySetInnerHTML={{ __html: item }} />
+    ) : (
+      item
+    )}
+  </div>
+))}
+             
+         </div>
+  
 
-          <motion.button
+          <Link to="/Extracurriculars"><motion.button
                        whileHover={{ scale: 1.1 }}
                        whileTap={{ scale: 0.9 }}
                        className="w-[180px] h-[60px] p-5 px-[30px] flex items-center border-2 border-black
@@ -61,7 +59,7 @@ const Extracaricular = () => {
                        hover:bg-[#184C77] hover:text-[#FFFF] transition-all duration-300 tracking-wide"
                      >
                        Learn More
-                     </motion.button>
+                     </motion.button></Link>
          </div>
         
       </section>
