@@ -4,25 +4,20 @@ import AboutUs from './Pages/AboutUs'
 import Academics from './Pages/Academics'
 
 import Footer from './components/Home/Footer'
-
-import './App.css'
-
-
 import Extracurriculars from './Pages/Extracurriculars'
-import CustomCursor from './components/CustomCursor'
 import {useState} from 'react'
 import Navbar from './components/Navbar'
 
 
 const App = () => {
-   const [isHovering3D, setIsHovering3D] = useState(false);
+   
 
   return (
    
 <>
-<Navbar/>
+
     <Router>
-      <CustomCursor isHovering3D={isHovering3D} />
+      
        
     <Routes>
      

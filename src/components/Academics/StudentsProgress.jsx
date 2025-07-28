@@ -29,13 +29,17 @@ const StudentsProgress = () => {
     ]
   return (
    
-    <div className="mt-[210px] mb-[210px] ">
+    <motion.div className="mt-[210px] mb-[210px] "
+    initial={{opacity: 0, rotateX: "90deg"}}
+    whileInView={{opacity:1, rotateX: 0}}
+    transition={{duration: 2}}>
       <div className="relative flex justify-around px-[100px]">
         <div className="bg-black w-[730px] h-[680px]">
             <div className="h-[220px] w-[320px] bg-[#1e4aaa] "></div>
              <div className="absolute h-[220px] w-[320px] bg-[#1e4aaa] ml-[413px] bottom-[-2px]"></div>
              <div className="absolute z-50 border-[20px] ml-[60px]  w-[610px] bottom-[30px]
-             h-[595px] bg-center bg-cover bg-no-repeat bg-[url('public/images/academicsbgimg.png')]"></div>
+             h-[595px] bg-center bg-cover bg-no-repeat "
+             style={{ backgroundImage: "url('images/academicsbgimg.png')" }}></div>
         </div>
 
         <div className="flex flex-col justify-evenly">
@@ -56,7 +60,7 @@ const StudentsProgress = () => {
           </motion.button>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

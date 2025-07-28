@@ -27,14 +27,21 @@ const Awards = () => {
      
         ]
   return (
-    <div className="flex flex-col h-[670px] w-full items-center bg-black mt-[185px] justify-around py-[35px]">
+    <motion.div className="flex flex-col h-[670px] w-full items-center bg-black mt-[185px] justify-around py-[35px]"
+    initial={{opacity:0, scale:0}}
+    whileInView={{opacity:1, scale: 1}}
+    transition={{duration: 2}}>
         <div className="flex w-full items-center justify-around">
             <section className="flex flex-col items-center">
                 <h1 className="text-white text-[55px] mt-[40px] tracking-wide-30">Our Awards</h1>
             </section>
             <section className="flex items-center justify-around  gap-[20px]">
-                <div className="w-[380px] h-[200px] rounded-[15px] bg-center bg-cover bg-no-repeat  bg-[url('public/images/girlWri.png')]"></div>
-               <div className="w-[380px] h-[200px] rounded-[15px] bg-center bg-cover bg-no-repeat  bg-[url('public/images/kidsWri.png')]"></div>
+                <div className="w-[380px] h-[200px] rounded-[15px] bg-center bg-cover
+                 bg-no-repeat  "
+                 style={{ backgroundImage: "url('images/girlWri.png')" }}></div>
+               <div className="w-[380px] h-[200px] rounded-[15px] bg-center
+                bg-cover bg-no-repeat  "
+                style={{ backgroundImage: "url('images/kidsWri.png')" }}></div>
             </section>
         </div>
         {/* Section with circles */}
@@ -54,8 +61,12 @@ const Awards = () => {
          <div className="flex w-full items-center justify-evenly">
           
             <section className="flex items-center justify-around  gap-[20px]">
-                <div className="w-[380px] h-[200px] rounded-[15px] bg-center bg-cover bg-no-repeat  bg-[url('public/images/studentwitbg.png')]"></div>
-               <div className="w-[380px] h-[200px] rounded-[15px] bg-center bg-cover bg-no-repeat  bg-[url('public/images/extrStud.png')]"></div>
+                <div className="w-[380px] h-[200px] rounded-[15px] bg-center
+                 bg-cover bg-no-repeat  "
+                 style={{ backgroundImage: "url('images/studentwitbg.png')" }}></div>
+               <div className="w-[380px] h-[200px] rounded-[15px] bg-center
+                bg-cover bg-no-repeat "
+                style={{ backgroundImage: "url('images/extrStud.png')" }}></div>
             </section>
               <section>
                       {paragraphs.map((p,idx)=>(
@@ -63,7 +74,7 @@ const Awards = () => {
             ))}
             </section>
         </div>
-    </div>
+    </motion.div>
   )
 }
 

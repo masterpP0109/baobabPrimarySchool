@@ -4,7 +4,10 @@ import { motion } from "framer-motion"
 
 const Excellence = () => {
   return (
-    <div className=" flex w-full h-[620px]  gap-[-50px] px-[90px] mt-[180px] align-center justify-evenly items-center bg-[#184C77] ">
+    <motion.div className=" flex w-full h-[620px]  gap-[-50px] px-[90px] mt-[180px] align-center justify-evenly items-center bg-[#184C77] "
+    initial={{opacity: 0, translateX: "-100%"}}
+    whileInView={{opacity:1, translateX: 0}}
+    transition={{duration: 2}}>
       <div className=" flex flex-col gap-[40px] ">
         <h1 className="text-[65px] text-white ">Excellence in Action</h1>
         <p className="text-[28px] text-white tracking-wide-30">Nurturing the development of the child ,enabling <br/>
@@ -24,10 +27,11 @@ const Excellence = () => {
         </motion.button>
       </div>
       <div className="z-50 h-[790px] align-center justify-center mb-[-10px] w-[690px] rounded-[30px] border-[10px]
-       bg-center bg-cover bg-no-repeat bg-[url('public/images/childOnBoard.png')]">
+       bg-center bg-cover bg-no-repeat "
+       style={{ backgroundImage: "url('images/childOnBoard.png')"}}>
 
       </div>
-    </div>
+    </motion.div>
   )
 }
 

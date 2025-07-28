@@ -1,7 +1,10 @@
 import { motion } from "framer-motion"
 const Explore = () => {
   return (
-    <div className="flex flex-col items-center">
+    <motion.div className="flex flex-col items-center"
+    initial={{opacity: 0, rotateX: "90deg"}}
+    whileInView={{opacity:1, rotateX: 0}}
+    transition={{duration: 2}}>
      <div className=" flex w-[1700px] rounded-[45px] h-[680px]  gap-[10px] px-[90px] mt-[180px] align-center justify-evenly items-center bg-[#184C77] ">
           <div className=" flex flex-col gap-[40px] ">
             <h1 className="text-[65px] text-white  tracking-wide-30  leading-tight ">Explore Our <br/> Extracurricular <br/>With Our Students</h1>
@@ -20,11 +23,12 @@ const Explore = () => {
             </motion.button>
           </div>
           <div className="z-50 h-[820px] align-center justify-center mb-[-10px] w-[710px] rounded-[30px] 
-           bg-center bg-cover bg-no-repeat bg-[url('public/images/replacew.webp')]">
+           bg-center bg-cover bg-no-repeat "
+           style={{ backgroundImage: "url('images/replacew.webp')" }}>
     
           </div>
         </div>
-        </div>
+        </motion.div>
   )
 }
 
