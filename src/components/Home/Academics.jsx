@@ -20,7 +20,7 @@ const Academics = () => {
       initial={{opacity:0, scale:0}}
     whileInView={{opacity:1, scale: 1}}
     transition={{duration: 2}}
-     viewport={{ once: true}}
+     viewport={{ once: true,amount: 0.1}}
     >
       {/* Image Side */}
       <section className=" mb-10 lg:mb-0 flex justify-center ">

@@ -79,7 +79,7 @@ const AboutUs = () => {
     initial={{opacity:0, rotateY: "90deg"}}
     whileInView={{opacity:1, rotateY: 0}}
     transition={{duration: 2.6}}
-    viewport={{ once: true}} >
+    viewport={{ once: true, amount: 0.1}} >
       <section className="flex flex-col xs:items-center xl:items-start gap-8 md:gap-[3rem] overflow-hidden">
         <h1
           className="xs:text-[2.7rem] sm:text-3xl text-center lg:text-start md:text-6xl lg:text-[65px] xl:text-[2.5rem]  xl:text-start font-[400] leading-none tracking-wide-30"
