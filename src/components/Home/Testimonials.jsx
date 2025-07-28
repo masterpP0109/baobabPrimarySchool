@@ -96,7 +96,7 @@ const Testimonials = () => {
         </p>
       </div>
       <section className="z-50 flex flex-col items-center  mt-8">
-        <div className="flex gap-[60px] mx-0 h-auto justify-center w-full  ">
+        <div className="flex gap-[60px] mx-0 h-auto justify-center w-full md:flex-col xl:flex-row items-center ">
           {[0, 1].map((offset) => {
             const cardIdx = getCardIndex(offset);
             return (

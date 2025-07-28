@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const ProgressWithIcon = ({ targetProgress, triggerAnimation }) => {
   const [progress, setProgress] = useState(0);
@@ -70,20 +71,25 @@ const AboutUs = () => {
 
   return (
     <motion.div
-      className="px-4 sm:px-6 lg:px-5 flex xs:flex-col sm:flex-col flex-col md:flex-col 
-       lg:flex-col xl:flex-row mt-[100px] xl:mt-[200px] md:items-center justify-around gap-[30px] overflow-hidden"
+      className="px-4   sm:px-6 lg:px-5 flex xs:flex-col sm:flex-col flex-col md:flex-col 
+       lg:flex-col xl:flex-row xs:mt-[5em] mt-[100px] xl:mt-[200px] md:items-center justify-around
+        gap-[30px]
+        overflow-hidden"
       ref={sectionRef}
     initial={{opacity:0, rotateY: "90deg"}}
     whileInView={{opacity:1, rotateY: 0}}
-    transition={{duration: 3}} >
-      <section className="flex flex-col gap-8 md:gap-[3rem] overflow-hidden">
+    transition={{duration: 2.6}}
+    viewport={{ once: true}} >
+      <section className="flex flex-col xs:items-center xl:items-start gap-8 md:gap-[3rem] overflow-hidden">
         <h1
-          className="text-sm sm:text-3xl text-center lg:text-start md:text-6xl lg:text-[65px] xl:text-[65px]  xl:text-start font-[400] leading-none tracking-wide-30"
+          className="xs:text-[2.7rem] sm:text-3xl text-center lg:text-start md:text-6xl lg:text-[65px] xl:text-[2.5rem]  xl:text-start font-[400] leading-none tracking-wide-30"
         >
           About Us
         </h1>
 
-        <div className="text-[23px] md:w-full flex-wrap lg:text-[27px] xl:text-[25px] font-[400] md:leading-[30px] lg:leading-[28px] sm:leading-[35px] min-h-[210px] text-black">
+        <div className="xs:text-[1.3rem] xs:text-  xs:text-wrap xl:text-nowrap  xs:w-full
+         md:w-full  lg:text-[27px] xl:text-[1.125rem] font-[400] md:leading-[30px] 
+         lg:leading-[28px] xs:leading-none sm:leading-[35px] min-h-[210px] text-black">
           At Baobab Primary School, we believe every child holds the potential<br />
           to lead, inspire, and uplift their community. Rooted in strong values<br />
           and enriched by our unique location near one of the world’s natural<br />
@@ -105,18 +111,18 @@ const AboutUs = () => {
               <div className="h-6 w-6 md:h-9 md:w-9 bg-transparent border-[3px] md:border-[4px] flex flex-col items-center rounded-full justify-center border-[#184C77]">
                 <div className="h-3 w-3 md:h-6 md:w-6 bg-[#184C77] rounded-full"></div>
               </div>
-              <p className="text-sm sm:text-base md:text-lg lg:text-[21px] font-normal leading-none text-black">
+              <p className="xs:text-[1rem] sm:text-base md:text-lg lg:text-[21px] font-normal leading-none text-black">
                 {text}
               </p>
             </div>
           ))}
         </div>
 
-        <button
-          className="w-full max-w-[205px] h-[50px] md:h-[60px] mt-4 p-3 md:p-5 flex lg:justify-center xl:align-start lg:items-center text-sm sm:text-base md:text-lg lg:text-xl hover:bg-slate-500 rounded-[15px] bg-[#184C77] transition-all duration-300 tracking-wide-20 text-white"
+        <Link to="/AboutUs"><motion.button
+          className="w-full max-w-[205px] xs:align-center h-[50px] md:h-[60px] mt-4 p-3 md:p-5 flex lg:justify-center xl:align-start lg:items-center text-sm sm:text-base md:text-lg lg:text-xl hover:bg-slate-500 rounded-[15px] bg-[#184C77] transition-all duration-300 tracking-wide-20 text-white"
         >
           Explore More
-        </button>
+        </motion.button></Link>
 
         {isLargeScreen && (
           <ProgressWithIcon targetProgress={75} triggerAnimation={inView} />
@@ -124,33 +130,49 @@ const AboutUs = () => {
       </section>
 
       
-      <section className="w-1/2 flex justify-center lg:mr-[-10px] xl:mr-[-120px]">
+      <section className="xl:w-1/2 flex justify-center xs:w-full  lg:mr-[-10px] xl:mr-[-120px]">
   <div
     className="relative w-full   sm:w-[500x] md:w-[600px]
       xl:w-[550px]
-       h-[350px] sm:h-[500px] md:h-[800px] lg:h-[750px]
+       h-[450px] sm:h-[500px] md:h-[800px] lg:h-[750px]
        xl:h-[760px] bg-cover bg-center bg-no-repeat rounded-[30px]"
     style={{ backgroundImage: "url('/images/heroimage.webp')" }}
   >
-    <div className="absolute top-[30px] sm:top-[60px] md:top-[105px] xl:top-[80px] left-1/2 transform -translate-x-1/2 flex ml-[-80px] sm:ml-[-80px] md:ml-[-200px] lg:ml-[-280px] flex-col gap-3 sm:gap‑5">
+    <div className="absolute xs:top-[3rem] sm:top-[60px] md:top-[105px] xl:top-[80px] left-1/2 
+    transform -translate-x-1/2 flex xs:ml-[-60px] sm:ml-[-80px] md:ml-[-200px] lg:ml-[-280px] 
+    flex-col gap-3 sm:gap‑5">
       {/* First Card */}
-      <div className="w-[210px] sm:w-[220px] md:w-[308px] h-[90px] sm:h-[120px] md:h-[221px] rounded-[20px] border-[4px] md:border-[6px] bg-black text-white flex items-center">
+      <motion.div className="w-[210px] sm:w-[220px] md:w-[308px] h-[120px] sm:h-[120px]
+       md:h-[221px] rounded-[20px] border-[4px] md:border-[6px] bg-black text-white
+        flex items-center"
+        whileHover={{ scale: 1.21}}
+         transition={{ duration: 0.7, delay: 0.3 }}>
         <p className="px-3 sm:px-5 text-sm sm:text-base md:text-lg lg:text-[25px] leading-6 sm:leading-9">
           At Baobab Primary School, we empower young minds to grow with purpose and pride.
         </p>
-      </div>
+      </motion.div>
       {/* Second Card */}
-      <div className="w-[250px] sm:w-[250px] md:w-[345px] h-[90px] sm:h-[120px] md:h-[241px] rounded-[20px] border-[4px] md:border-[6px] bg-[#184C77] text-white flex items-center mt-[-20px] sm:mt-[-30px] md:mt-[-40px] ml-[-8px] sm:ml-[-12px] md:ml-[-18px]">
-        <p className="px-3 sm:px-5 text-sm sm:text-base md:text-lg lg:text-[25px] leading-6 sm:leading-9">
+      <motion.div className="w-[15.5rem] sm:w-[250px] md:w-[345px] h-[9rem]
+       sm:h-[120px] md:h-[241px] rounded-[20px] border-[4px] md:border-[6px]
+        bg-[#184C77] text-white flex items-center mt-[-20px] sm:mt-[-30px]
+         md:mt-[-40px] ml-[-8px] sm:ml-[-12px] md:ml-[-18px]"
+         whileHover={{ scale: 1.1 }}
+         transition={{ duration: 0.7, delay: 0.3 }}>
+        <p className="px-3 sm:px-5 text-sm sm:text-base md:text-lg lg:text-[25px]
+         leading-6 sm:leading-9">
           We Baobab, we inspire lifelong learners grounded in empathy, curiosity, and resilience.
         </p>
-      </div>
+      </motion.div>
       {/* Third Card */}
-      <div className="w-[180px] sm:w-[220px] md:w-[308px] h-[90px] sm:h-[120px] md:h-[221px] rounded-[20px] border-[4px] md:border-[6px] bg-black text-white flex items-center mt-[-15px] sm:mt-[-20px] md:mt-[-30px]">
+      <motion.div className="w-[13rem] sm:w-[220px] md:w-[308px] h-[120px] sm:h-[120px]
+       md:h-[221px] rounded-[20px] border-[4px] md:border-[6px] bg-black text-white 
+        items-center mt-[-15px] sm:mt-[-20px] md:mt-[-30px]"
+        whileHover={{ scale: 1.1}}
+        transition={{ duration: 0.7, delay: 0.3 }}>
         <p className="px-3 sm:px-5 text-sm sm:text-base md:text-lg lg:text-[25px] leading-6 sm:leading-9">
           Baobab Primary School builds strong foundations for bright, confident futures.
         </p>
-      </div>
+      </motion.div>
     </div>
   </div>
 </section>
