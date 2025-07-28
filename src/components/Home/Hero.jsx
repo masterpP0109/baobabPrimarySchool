@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { AcademicCapIcon, CreditCardIcon, PhoneIcon } from "@heroicons/react/24/outline";
-import Navbar from "./Navbar";
+
 
 const Hero = ({ isHovering3D }) => {
   return (
@@ -19,7 +19,7 @@ const Hero = ({ isHovering3D }) => {
       {/* Header + Hero Content */}
       <div className="relative z-20 flex flex-col h-screen justify-between">
         {/* Header */}
-        <Navbar />
+      
 
         {/* Hero Content */}
         <section className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-center lg:justify-between flex-grow py-10">
