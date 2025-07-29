@@ -1,5 +1,5 @@
 
-import Navbar from '../Home/Navbar';
+import Navbar from '../Navbar';
 import { motion } from "framer-motion";
 import { Home, Menu, User } from "lucide-react";
 import {

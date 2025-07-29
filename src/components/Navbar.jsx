@@ -2,14 +2,10 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="mt-[40px]">
-
+    <div className="xs:mt-[15px] sm:mt-[20px] md:mt-[30px] lg:mt-[35px]  xl:mt-[40px]">
       <header className="flex flex-wrap xl:gap-[40px] bg-transparent justify-between items-center px-2 sm:px-6 xl:px-[140px] py-4">
-
-
-
         <img
-          src="/images/logo.png"
+          src="/images/logoBlue.png"
           alt="LOGO"
           className="w-[80px] sm:w-[100px]"
         />
@@ -41,7 +37,6 @@ const Navbar = () => {
           className="hidden md:block px-3 py-1.5 text-sm xl:w-[100px] text-black placeholder:text-white rounded-full border border-none bg-gray-200 bg-opacity-20 focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </header>
-
     </div>
   );
 };
