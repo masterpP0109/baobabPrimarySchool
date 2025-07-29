@@ -1,5 +1,5 @@
 import React from 'react' 
-  import Navbar from '../components/Home/Navbar'
+  
   import Ftvcards from '../components/AboutUs/Ftvcards'
   
  
@@ -10,7 +10,7 @@ const AboutUs = () => {
     <>
       
     <div className='bg-blue-700 h-[90vh] '>
-    <Navbar/>
+   
     <div className='flex flex-row container justify-between '>
     <div className='flex flex-col'>
       <h1 className='text-white text-7xl pl-[100px] mt-[120px] font-Galang'>About Us</h1>
@@ -23,6 +23,7 @@ const AboutUs = () => {
       </div>
          <div>
       <Ftvcards/>
+      <Facilities/>
     </div>
     </div>
 

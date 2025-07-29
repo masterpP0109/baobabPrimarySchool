@@ -39,7 +39,8 @@ const Excelling = () => {
 
   return (
     <motion.div
-      className="mx-auto px-4 sm:px-6 lg:px-8 relative mt-[200px] bg-black w-full flex flex-col items-center xl:h-[520px]"
+      className="mx-auto px-4 sm:px-6 lg:px-8 relative mt-[200px] bg-black w-full flex
+       flex-col items-center xl:h-[520px]"
       initial={{ opacity: 0, y: 380 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.1, ease: "easeInOut" }}
