@@ -5,8 +5,7 @@ import Academics from './Pages/Academics'
 
 import Footer from './components/Home/Footer'
 import Extracurriculars from './Pages/Extracurriculars'
-import {useState} from 'react'
-import Navbar from './components/Navbar'
+
 
 
 const App = () => {

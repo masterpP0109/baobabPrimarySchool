@@ -87,23 +87,26 @@ const Testimonials = () => {
   const getCardIndex = (offset) => (current + offset + total) % total;
 
   return (
-    <div className="z-50 flex flex-col mt-[160px] gap-[30px]">
+    <div className="z-50 flex flex-col xs:items-center  mt-[160px] gap-[30px]">
       <div className="flex flex-col px-4 sm:px-8 ml-[-5px] md:px-16 gap-[30px] lg:px-[300px]">
-        <h1 className="text-[65px] leading-2 tracking-wide-30">What Parents Say About Us</h1>
-        <p className="text-[22px]">
+        <h1 className=" xs:text-[30px] xl:text-[65px] leading-2 tracking-wide-30">What Parents Say About Us</h1>
+        <p className=" xs:text-[12px] xl:text-[21px]">
           At Baobab Primary School, we nurture confident, compassionate learners through academic excellence, creativity, and <br />
           values based education empowering every child to grow strong, think boldly, and lead with heart.
         </p>
       </div>
       <section className="z-50 flex flex-col items-center  mt-8">
-        <div className="flex gap-[60px] mx-0 h-auto justify-center w-full md:flex-col xl:flex-row items-center ">
+        <div className="flex gap-[60px]  mx-0 h-auto justify-center w-full xs:flex-col sm:flex-col
+         md:flex-col xl:flex-row items-center ">
           {[0, 1].map((offset) => {
             const cardIdx = getCardIndex(offset);
             return (
               <AnimatePresence mode="wait" custom={direction} key={offset}>
                 <motion.div
                   key={cardIdx}
-                  className="flex w-[690px]  h-[280px] bg-white rounded-[30px] shadow-lg  group border-4 border-gray-300"
+                  className="flex lg:w-[560px] xs:w-[370px] sm:w-[450px]  xl:w-[690px] xs:h-[190px]
+                   sm:h-[200px] xl:h-[280px] lg:h-[180px] bg-white rounded-[30px] shadow-lg  group
+                    border-4 border-gray-300"
                   custom={direction}
                   variants={CARD_VARIANTS}
                   initial="initial"
@@ -123,9 +126,9 @@ const Testimonials = () => {
                     }}
                   ></div>
                   <div className="flex flex-col justify-center px-4 w-[400px] ">
-                    <h1 className="text-[22px] sm:text-[26px] md:text-[24px] font-bold mb-2">{testimonialsData[cardIdx].heading}</h1>
+                    <h1 className="text-[15px] sm:text-[26px] md:text-[24px] font-bold mb-2">{testimonialsData[cardIdx].heading}</h1>
                     <div
-                      className="text-[19px] sm:text-[18px] md:text-[19px]"
+                      className="text-[12px] sm:text-[18px] md:text-[19px]"
                       dangerouslySetInnerHTML={{ __html: testimonialsData[cardIdx].paragraph }}
                     />
                   </div>
@@ -158,7 +161,7 @@ const Testimonials = () => {
         </div>
        
       </section>
-      <section className="relative z-0 w-full h-[400px] mt-[-250px] bg-[#184C77]">
+      <section className="relative z-0 w-full xs:h-[240px] xl:h-[400px] mt-[-250px] bg-[#184C77]">
 
       </section>
     </div>
