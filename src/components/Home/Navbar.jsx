@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="mt-[40px]">
+    <div className="mt-abs">
 
-      <header className="flex flex-wrap xl:gap-[40px] bg-transparent justify-between items-center px-2 sm:px-6 xl:px-[140px] py-4">
+      <header className="pt-[4rem] flex flex-wrap xl:gap-[40px] bg-transparent justify-between items-center px-2 sm:px-6 xl:px-[140px] py-4">
 
 
 

@@ -20,6 +20,7 @@ const App = () => {
    
 
     <Router>
+      
       <CustomCursor isHovering3D={isHovering3D} />
        
     <Routes>
