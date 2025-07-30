@@ -6,7 +6,7 @@ import {
   CreditCardIcon,
   PhoneIcon,
 } from "@heroicons/react/24/outline";
-import Navbar from "../Home/Navbar";
+import Navbar from "../Navbar";
 
 const Hero = () => {
   return (
