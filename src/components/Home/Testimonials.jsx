@@ -87,16 +87,17 @@ const Testimonials = () => {
   const getCardIndex = (offset) => (current + offset + total) % total;
 
   return (
-    <div className="z-50 flex flex-col xs:items-center  mt-[160px] gap-[30px]">
+    <div className="z-50 flex flex-col xs:items-center items-center mt-[160px] gap-[30px]">
       <div className="flex flex-col px-4 sm:px-8 ml-[-5px] md:px-16 gap-[30px] lg:px-[300px]">
-        <h1 className=" xs:text-[30px] xl:text-[65px] leading-2 tracking-wide-30">What Parents Say About Us</h1>
+        <h1 className=" xs:text-[30px] text-[30px] xl:text-[65px] leading-2 tracking-wide-30">What Parents Say About Us</h1>
         <p className=" xs:text-[12px] xl:text-[21px]">
           At Baobab Primary School, we nurture confident, compassionate learners through academic excellence, creativity, and <br />
           values based education empowering every child to grow strong, think boldly, and lead with heart.
         </p>
       </div>
       <section className="z-50 flex flex-col items-center  mt-8">
-        <div className="flex gap-[60px]  mx-0 h-auto justify-center w-full xs:flex-col sm:flex-col
+        <div className="flex gap-[60px]  mx-0 h-auto justify-center w-full flex-col xs:flex-col
+         sm:flex-col
          md:flex-col xl:flex-row items-center ">
           {[0, 1].map((offset) => {
             const cardIdx = getCardIndex(offset);
@@ -104,7 +105,7 @@ const Testimonials = () => {
               <AnimatePresence mode="wait" custom={direction} key={offset}>
                 <motion.div
                   key={cardIdx}
-                  className="flex lg:w-[560px] xs:w-[370px] sm:w-[450px]  xl:w-[690px] xs:h-[190px]
+                  className="flex lg:w-[560px] xs:w-[370px] w-[370px]  sm:w-[450px]  xl:w-[690px] xs:h-[190px] h-[190px]
                    sm:h-[200px] xl:h-[280px] lg:h-[180px] bg-white rounded-[30px] shadow-lg  group
                     border-4 border-gray-300"
                   custom={direction}
@@ -161,7 +162,7 @@ const Testimonials = () => {
         </div>
        
       </section>
-      <section className="relative z-0 w-full xs:h-[240px] xl:h-[400px] mt-[-250px] bg-[#184C77]">
+      <section className="relative z-0 w-full xs:h-[240px] h-[240px] xl:h-[400px] mt-[-250px] bg-[#184C77]">
 
       </section>
     </div>
