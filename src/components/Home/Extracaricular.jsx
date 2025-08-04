@@ -16,7 +16,7 @@ const Extracaricular = () => {
        <section className="flex flex-col xs:justify-center xs:items-center justify-around xs:gap-[20px] lg:gap-[50px]">
       <h1 className="xs:text-[2.2rem] sm:text-[36px] xl:text-[50px] font-[400] tracking-wide">
         Extracaricular</h1>
-      <p className="xs:text-[0.95rem] xs:w-full xs:text-wrap lg:text-nowrap  sm:text-[18px] xl:text-[22px]">Beyond the classroom, we nurture talent, build <br/>
+      <p className="xs:text-[0.95rem] text-sm text-center md:text-start xs:w-full xs:text-wrap lg:text-nowrap  sm:text-[18px] xl:text-[22px]">Beyond the classroom, we nurture talent, build <br/>
         character, and inspire every child to shine through sports,<br/>
          arts, leadership, and service</p>
          <div className="flex flex-col xs:items-center xs:justify-center justify-around gap-[150px]"> 

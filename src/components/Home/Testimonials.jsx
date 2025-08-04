@@ -89,8 +89,8 @@ const Testimonials = () => {
   return (
     <div className="z-50 flex flex-col xs:items-center items-center mt-[160px] gap-[30px]">
       <div className="flex flex-col px-4 sm:px-8 ml-[-5px] md:px-16 gap-[30px] lg:px-[300px]">
-        <h1 className=" xs:text-[30px] text-[30px] xl:text-[65px] leading-2 tracking-wide-30">What Parents Say About Us</h1>
-        <p className=" xs:text-[12px] xl:text-[21px]">
+        <h1 className=" xs:text-[30px] text-center md:text-start text-[30px] xl:text-[65px] leading-2 tracking-wide-30">What Parents Say About Us</h1>
+        <p className=" xs:text-[12px] text-sm text-center md:text-start xl:text-[21px]">
           At Baobab Primary School, we nurture confident, compassionate learners through academic excellence, creativity, and <br />
           values based education empowering every child to grow strong, think boldly, and lead with heart.
         </p>
@@ -105,8 +105,8 @@ const Testimonials = () => {
               <AnimatePresence mode="wait" custom={direction} key={offset}>
                 <motion.div
                   key={cardIdx}
-                  className="flex lg:w-[560px] xs:w-[370px] w-[370px]  sm:w-[450px]  xl:w-[690px] xs:h-[190px] h-[190px]
-                   sm:h-[200px] xl:h-[280px] lg:h-[180px] bg-white rounded-[30px] shadow-lg  group
+                  className="flex lg:w-[560px] xs:w-[380px] w-[390px]  sm:w-[450px] md:w-[560px]  xl:w-[690px] xs:h-[210px] h-[200px]
+                   sm:h-[200px] md:h-[280px] xl:h-[280px] lg:h-[180px] bg-white rounded-[30px] shadow-lg  group
                     border-4 border-gray-300"
                   custom={direction}
                   variants={CARD_VARIANTS}
@@ -127,9 +127,9 @@ const Testimonials = () => {
                     }}
                   ></div>
                   <div className="flex flex-col justify-center px-4 w-[400px] ">
-                    <h1 className="text-[15px] sm:text-[26px] md:text-[24px] font-bold mb-2">{testimonialsData[cardIdx].heading}</h1>
+                    <h1 className="text-sm xs:text-[15px] sm:text-[26px] md:text-[24px] font-bold mb-2">{testimonialsData[cardIdx].heading}</h1>
                     <div
-                      className="text-[12px] sm:text-[18px] md:text-[19px]"
+                      className=" text-sm xs:text-[12px] sm:text-[18px] md:text-[19px]"
                       dangerouslySetInnerHTML={{ __html: testimonialsData[cardIdx].paragraph }}
                     />
                   </div>

@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import CheckScreen from "../CheckScreen";
+
 
 const ProgressWithIcon = ({ targetProgress, triggerAnimation }) => {
   const [progress, setProgress] = useState(0);
@@ -20,6 +22,8 @@ const ProgressWithIcon = ({ targetProgress, triggerAnimation }) => {
 
     return () => clearInterval(interval);
   }, [triggerAnimation, targetProgress]);
+
+  
 
   return (
     <div className="relative w-[700px] h-3 bg-black rounded-full">
@@ -69,26 +73,28 @@ const AboutUs = () => {
     };
   }, [isLargeScreen]);
 
+  const shouldAnimate=CheckScreen();
+
   return (
     <motion.div
       className="px-4   sm:px-6 lg:px-5 flex xs:flex-col sm:flex-col flex-col md:flex-col 
-       lg:flex-col xl:flex-row xs:mt-[5em] mt-[100px] xl:mt-[200px] md:items-center justify-around
+       lg:flex-col xl:flex-row mt:-[1.5em] xs:mt-[3em] mt-[100px] xl:mt-[200px] md:items-center justify-around
         gap-[30px]
         overflow-hidden"
       ref={sectionRef}
-    initial={{opacity:0, rotateY: "90deg"}}
-    whileInView={{opacity:1, rotateY: 0}}
-    transition={{duration: 2.6}}
-    viewport={{ once: true, amount: 0.1}} >
-      <section className="flex flex-col xs:items-center xl:items-start gap-8 md:gap-[3rem] overflow-hidden">
+    initial={shouldAnimate ? {opacity:0, rotateY: "90deg"} : false}
+    whileInView={ shouldAnimate ? {opacity:1, rotateY: 0} : false}
+    transition={ shouldAnimate ? {duration: 2.6} : false}
+    viewport={ shouldAnimate ? { once: true, amount: 0.1} : false} >
+      <section className="flex flex-col xs:items-center xl:items-start gap-4 sm:gap-8 md:gap-[3rem] overflow-hidden">
         <h1
-          className="xs:text-[2.7rem] sm:text-3xl text-center lg:text-start md:text-6xl lg:text-[65px] xl:text-[2.5rem]  xl:text-start font-[400] leading-none tracking-wide-30"
+          className="text-[1rem] xs:text-[1.7rem] sm:text-3xl text-center lg:text-start md:text-6xl lg:text-[65px] xl:text-[2.5rem]  xl:text-start font-[400] leading-none tracking-wide-30"
         >
           About Us
         </h1>
 
-        <div className="xs:text-[1.3rem] xs:text-  xs:text-wrap xl:text-nowrap  xs:w-full
-         md:w-full  lg:text-[27px] xl:text-[1.125rem] font-[400] md:leading-[30px] 
+        <div className="xs:text-[0.7rem] text-[0.6rem]   xl:text-nowrap  xs:w-full
+         md:w-full text-center text-wrap    md:text-start md:text-[1.3rem] lg:text-[27px] xl:text-[1.125rem] font-[400] md:leading-[30px] 
          lg:leading-[28px] xs:leading-none sm:leading-[35px] min-h-[210px] text-black">
           At Baobab Primary School, we believe every child holds the potential<br />
           to lead, inspire, and uplift their community. Rooted in strong values<br />
@@ -98,7 +104,7 @@ const AboutUs = () => {
           character, and curiosity.
         </div>
 
-        <div className="grid-cols-1 flex sm:grid-cols-2 md:flex-col gap-[45px]">
+        <div className="grid-cols-1 flex sm:grid-cols-2 xs:mt-[-100px] md:flex-col gap-[45px]">
           {[
             "Rooted in strong core values",
             "Balanced academic and creative learning",
