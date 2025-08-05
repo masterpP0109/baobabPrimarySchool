@@ -81,7 +81,7 @@ const Campus = () => {
           <h1 className='text-6xl text-[#184C77] font-[Galang] flex justify-center item mt-10'>Baobab Primary School</h1>
           <div className='border-b-2 border-[#184C77] mt-20 -z-20'></div>
           <div className='rounded-2xl bg-[#184C77] w-[40%] h-24 -mt-12 ml-[26rem] -z-10'>
-            <p className='text-4xl text-white font-[Galang] tracking-wide-20 leading-loose flex justify-center items-center'>REGESTRATION FORM</p>
+            <p className='text-4xl text-white font-[Galang] tracking-wide-20 leading-loose flex justify-center items-center'>REGISTRATION FORM</p>
           </div>
 
           <input type="text" placeholder='Date:' className='border-b-2 border-black w-[26rem] ml-20 mt-20'/>

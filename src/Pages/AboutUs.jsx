@@ -22,7 +22,7 @@ const AboutUs = () => {
       <button className="bg-white text-[#184C77] ml-40 mt-[40px] w-[166px] h-[45px] rounded-full hover:bg-blue-200 transition duration-200">Apply Now</button>
       </div>
       <div>
-        <img src="/images/Rectangle52.png" alt="Child on Board" className='w-[493px] h-[506px] mt-[30px] absolute right-60 '/>
+        <img src="/images/Rectangle52.png" alt="Child on Board" className='w-[493px] h-[506px] mt-[60px] absolute right-60 '/>
       </div>
       </div>
       <Ftvcards/>
