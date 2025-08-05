@@ -1,6 +1,6 @@
 import React from 'react' 
-import Navbar from '../components/Navbar'
-import Ftvcards from '../components/AboutUs/Ftvcards'
+  import Navbar from '../components/Navbar'
+  import Ftvcards from '../components/AboutUs/Ftvcards'
 import Facilities from '../components/AboutUs/Facilities'
 import Mission from '../components/AboutUs/Mission'
 import Teacher from '../components/AboutUs/Teacher'

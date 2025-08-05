@@ -1,6 +1,12 @@
 import { motion } from "framer-motion";
 import { User } from "lucide-react";
 import { Link } from "react-router-dom";
+import CheckScreen from "../CheckScreen";
+import { useState } from "react";
+
+
+
+
 
   const cards = [
   {
@@ -13,14 +19,17 @@ import { Link } from "react-router-dom";
   },
 ];
 
+
+
 const Academics = () => {
+  const shouldAnimate = CheckScreen();
   return (
     <motion.div
       className=" flex flex-col xl:flex-row mt-24 items-center  lg:justify-around lg:gap-[20px] xl:gap-[1.3rem] "
-      initial={{opacity:0, scale:0}}
-    whileInView={{opacity:1, scale: 1}}
-    transition={{duration: 2}}
-     viewport={{ once: true,amount: 0.1}}
+      initial={shouldAnimate ? {opacity:0, scale:0} : false }
+    whileInView={ shouldAnimate ? {opacity:1, scale: 1} : false }
+    transition={ shouldAnimate ? {duration: 2} : false }
+     viewport={ shouldAnimate ? { once: false, } : false }
     >
       {/* Image Side */}
       <section className=" mb-10 lg:mb-0 flex justify-center ">
@@ -66,7 +75,7 @@ const Academics = () => {
         <h1 className="text-[1.8rem] sm:text-2xl md:text-3xl lg:text-8xl xl:text-[2.5rem] font-[300] tracking-wide-30">
           Academics
         </h1>
-        <p className="text-sm sm:text-base md:text-lg lg:text-4xl xl:text-[1.1rem] font-[500]">
+        <p className="text-sm text-center  lg:text-start sm:text-base md:text-lg lg:text-4xl xl:text-[1.1rem] font-[500]">
           Building strong academic foundations for life
           <br />
           Where young minds grow through learning
