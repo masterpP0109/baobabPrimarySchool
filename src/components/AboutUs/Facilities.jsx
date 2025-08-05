@@ -3,10 +3,10 @@ import React from 'react';
 
 const Facilities = () => {
   return (
-    <div className='ml-32'>
-      <h1 className='text-6xl text-black mt-[380px] font-[Galang]'>Our Facilities</h1>
+    <div className='ml-32 h-[60vh]'>
+      <h1 className='text-6xl text-black mt-[320px] font-[Galang]'>Our Facilities</h1>
 
-      <div className="flex flex-row mt-16 gap-8">
+      <div className="flex flex-row mt-10 gap-8">
       <div className="flex flex-col sm:flex-col md:flex-col gap-2">
        
         <div className="relative group h-[340px] w-[340px] overflow-hidden rounded-2xl">
@@ -44,11 +44,11 @@ const Facilities = () => {
           </div>
         </div>
 
-         <div className='bg-blue-600 h-[460px] w-[696px] mt-14 rounded-2xl absolute left-[47rem] border-2 border-white flex flex-col items-center justify-center'>
+         <div className='bg-[#184C77] h-[460px] w-[696px] mt-14 rounded-2xl absolute left-[47rem] border-2 border-white flex flex-col items-center justify-center'>
           <h2 className='text-white text-4xl font-[Allerta] mb-20'>Teaching Excellence</h2>
           <p className='text-white pl-20 pr-32 font-[Galang] text-xl mb-16'>At Baobab Primary, teaching excellence means passionate, skilled educators delivering high-quality, engaging lessons that inspire curiosity, build strong academic foundations, and support each child’s unique journey toward lifelong learning and success.</p>
           <div className="flex flex-row">
-             <button className='bg-white text-blue-500 ml-[98px] w-[166px] h-[45px] rounded-full hover:bg-blue-200 transition duration-200 mr-96'>Apply Now</button>
+             <button className='bg-white text-[#184C77] ml-[98px] w-[166px] h-[45px] rounded-full hover:bg-blue-200 transition duration-200 mr-96'>Apply Now</button>
              <img
               src="./images/arrow-right.png" 
               alt="right arrow" 

@@ -4,7 +4,7 @@ const Ftvcards = () => {
   return (
 
     
-    <div className='flex flex-row gap-20 mt-[100px]'>
+    <div className='flex flex-row gap-20 mt-[70px] z-20 absolute'>
         
         {/* Add your card content here */}      
         <div className="bg-black p-5 rounded-2xl border-4 border-white  w-[450px] h-[250px] ml-32">
